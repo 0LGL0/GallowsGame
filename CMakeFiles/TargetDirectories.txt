@@ -1,0 +1,3 @@
+/home/LGL/other/ProgrammingProjects/GallowsGame/CMakeFiles/GallowsGame.dir
+/home/LGL/other/ProgrammingProjects/GallowsGame/CMakeFiles/edit_cache.dir
+/home/LGL/other/ProgrammingProjects/GallowsGame/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/LGL/other/ProgrammingProjects/GallowsGame",
+  "command": "/usr/bin/c++    -o CMakeFiles/GallowsGame.dir/src/main.cpp.o -c /home/LGL/other/ProgrammingProjects/GallowsGame/src/main.cpp",
+  "file": "/home/LGL/other/ProgrammingProjects/GallowsGame/src/main.cpp",
+  "output": "CMakeFiles/GallowsGame.dir/src/main.cpp.o"
+}
+]

@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/GallowsGame.dir/link.d CMakeFiles/GallowsGame.dir/src/main.cpp.o -o GallowsGame
