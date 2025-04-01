@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/LGL/other/ProgrammingProjects/GallowsGame/src/main.cpp" "CMakeFiles/GallowsGame.dir/src/main.cpp.o" "gcc" "CMakeFiles/GallowsGame.dir/src/main.cpp.o.d"
+  "/data/data/com.termux/files/home/ProjectsCPP/GallowsGame/src/main.cpp" "CMakeFiles/GallowsGame.dir/src/main.cpp.o" "gcc" "CMakeFiles/GallowsGame.dir/src/main.cpp.o.d"
   "" "GallowsGame" "gcc" "CMakeFiles/GallowsGame.dir/link.d"
   )
 
