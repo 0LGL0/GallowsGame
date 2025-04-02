@@ -59,24 +59,24 @@ cd GallowsGame
 
 3. **Compile the game:**
 
- - GCC:
+  - GCC:
 
-   ```sh
-   g++ -o GallowsGame ../src/main.cpp -std=c++20
-   ```
+    ```sh
+    g++ -o GallowsGame ../src/main.cpp -std=c++20
+    ```
 
- - Clang:
+  - Clang:
   
-   ```sh
-   clang++ ../src/main.cpp -o GallowsGame -std=c++20
-   ```
+    ```sh
+    clang++ ../src/main.cpp -o GallowsGame -std=c++20
+    ```
 
- - CMake:
+  - CMake:
        
-   ```sh
-   cmake ..
-   cmake --build .
-   ```
+    ```sh
+    cmake ..
+    cmake --build .
+    ```
 
 4. **Run the game:**
 
