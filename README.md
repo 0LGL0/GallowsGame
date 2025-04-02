@@ -50,13 +50,35 @@ cd GallowsGame
    sudo pacman -S gcc
    ```
 
-2. **Compile the game(for clang, change g++ to clang++):**
-
+2. **Create `build` directory:**
+   
    ```sh
-   g++ -o GallowsGame src/main.cpp -std=c++14
+   mkdir build
+   cd build
    ```
 
-3. **Run the game:**
+3. **Compile the game:**
+
+     - GCC:
+
+      ```sh
+      g++ -o GallowsGame ../src/main.cpp -std=c++20
+      ```
+
+     - Clang:
+  
+       ```
+       clang++ ../src/main.cpp -o GallowsGame -std=c++20
+       ```
+
+     - CMake:
+       
+       ```sh
+       cmake ..
+       cmake --build .
+       ```
+
+4. **Run the game:**
 
    ```sh
    ./GallowsGame
