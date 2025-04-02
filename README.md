@@ -12,7 +12,7 @@ GallowsGame is a simple word-guessing game implemented in C++. This README provi
 
 ## Requirements
 
-- A C++ compiler (e.g., `g++` for Linux, `MSVC` for Windows)
+- A C++ compiler (e.g., `clang` or `g++` for Linux, `MSVC` for Windows)
 - CMake (optional, for a more portable build system)
 
 ## Getting Started
@@ -28,7 +28,7 @@ cd GallowsGame
 
 ### Building and Running on Linux
 
-1. **Install the necessary packages:**
+1. **Install the necessary packages (for clang, change g++/gcc to clang):**
 
    On Debian-based distributions (e.g., Ubuntu):
 
@@ -43,7 +43,14 @@ cd GallowsGame
    sudo dnf install g++ make
    ```
 
-2. **Compile the game:**
+   On Arch Linux:
+   
+   ```sh 
+   sudo pacman -Syu
+   sudo pacman -S gcc
+   ```
+
+2. **Compile the game(for clang, change g++ to clang++):**
 
    ```sh
    g++ -o GallowsGame src/main.cpp -std=c++14
