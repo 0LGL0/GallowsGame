@@ -65,6 +65,7 @@ int main() {
   const unsigned randWordIndex = std::rand() % 427 + 1;
   const std::string guessedWord = parseFile(pathToWordsFile, randWordIndex);
   std::string famousWord(guessedWord.size(), '#');
+  std::string incorrectLetters;
   for (unsigned short i = 0; i < 2; i++) {
     const unsigned short indexOfFamousLetter =
         rand() % (guessedWord.size() - 1);
@@ -122,8 +123,7 @@ int main() {
       break;
     }
 
-    std::cout << "Count of attempts: \033[1;34m" << attemptsCount << "\033[0m"
-              << std::endl;
+    std::cout << "Your incorrect letters:" << incorrectLetters << std::endl;
     std::cout << "Word you need to guess: " << famousWord << std::endl;
     std::cout << "\033[1;31mYou can press 'Ctrl' + 'C' to quit\033[0m"
               << std::endl;
@@ -131,7 +131,7 @@ int main() {
       // getChar(userLetter);
       std::cin >> userLetter;
       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    } while (!std::isalpha(userLetter));
+    } while (!std::isalpha(userLetter) || incorrectLetters.find(userLetter) != std::string::npos);
 
     std::vector<unsigned> indexes;
     for (unsigned i = 0; i < guessedWord.size(); i++) {
@@ -144,8 +144,10 @@ int main() {
       }
     }
 
-    if (!isLetterCorrect)
+    if (!isLetterCorrect){
       attemptsCount++;
+      incorrectLetters.push_back(userLetter);
+    }
   }
 
   return 0;
