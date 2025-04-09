@@ -38,15 +38,24 @@ public:
                    " #         \n"
                    " #         \n"
                    " #           ";
+    m_gameLogo = R"( 
+       ██████╗  █████╗ ██╗     ██╗      ██████╗ ██╗    ██╗███████╗
+      ██╔════╝ ██╔══██╗██║     ██║     ██╔═══██╗██║    ██║██╔════╝
+      ██║  ███╗███████║██║     ██║     ██║   ██║██║ █╗ ██║███████╗
+      ██║   ██║██╔══██║██║     ██║     ██║   ██║██║███╗██║╚════██║
+      ╚██████╔╝██║  ██║███████╗███████╗╚██████╔╝╚███╔███╔╝███████║
+       ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝
+    )";
     m_attemptsCount = 0;
   }
-
-  void play();
+  void menu();
 
 private:
   const unsigned getCountOfLines(const std::string pathToFile);
   const std::string parseFile(const unsigned short lineNum);
 
+  void play();
+  void settings();
   void clearTerminal();
   void gameLoop();
   void updateGallows();
@@ -58,6 +67,7 @@ private:
   std::string m_famousWord;
   std::string m_enteredLetters;
   std::string m_theGallows;
+  std::string m_gameLogo;
 
   unsigned m_randWordIndex;
   unsigned m_attemptsCount;
@@ -71,6 +81,34 @@ void Game::clearTerminal() {
   std::system("cls");
 #endif
 }
+
+void Game::menu() {
+  clearTerminal();
+
+  char menuUserLetter;
+
+  std::cout << m_gameLogo << std::endl << std::endl;
+
+  std::cout << "Please choose what you would like to do:" << std::endl;
+  std::cout << "1. Play" << std::endl;
+  std::cout << "2. Settings" << std::endl;
+  std::cout << "3. Quit" << std::endl;
+
+  do {
+    std::cin >> menuUserLetter;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  } while (!std::isdigit(menuUserLetter));
+
+  switch (menuUserLetter) {
+  case '1':
+    play();
+    break;
+  case '2':
+    settings();
+  }
+}
+
+void Game::settings() {}
 
 // void getChar(char &letter) {
 // #if defined(__linux__)
@@ -154,7 +192,7 @@ void Game::gameLoop() {
       std::cout << "Sorry, you lose ^)" << std::endl;
       break;
     } else if (m_guessedWord == m_famousWord) {
-      std::cout << "Congratulations!! You win with " << m_attemptsCount
+      std::cout << "Congratulations!! You won with " << m_attemptsCount
                 << " attempts";
       break;
     }
@@ -213,7 +251,7 @@ void Game::updateGallows() {
 int main() {
   std::srand(time(NULL));
   Game *game = new Game();
-  game->play();
+  game->menu();
 
   delete game;
   return 0;

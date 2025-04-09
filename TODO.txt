@@ -1,0 +1,5 @@
+1. Game menu      -
+2. Timer          -
+3. Settings       -
+  - 1. Difficult  -
+  - 2. Language   -
