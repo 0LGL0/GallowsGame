@@ -1,5 +1,7 @@
-1. Game menu      +
-2. Timer          -
-3. Settings       -
-  - 1. Difficult  -
-  - 2. Language   -
+1. Game menu                                     +
+  - 1. Game rules                                -
+  - 2. Settings                                  -
+     - 1. Difficult                              -
+     - 2. Language                               - ?
+     - 3. Changing the number of attempts        -
+     - 4. Timer                                  -
